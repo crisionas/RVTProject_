@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Text;
+
+namespace RVTLibrary.Models
+{
+    [DataContract]
+    public class RegistrationMessage
+    {
+
+        /// <summary>
+        /// Clasa registration message vine la loadbalancer de la Administrator
+        /// </summary>
+        [DataMember]
+        public string IDNP { get; set; }
+        [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string Surname { get; set; }
+        [DataMember]
+        public string Gender { get; set; }
+        [DataMember]
+        public DateTime Birth_date { get; set; }
+        [DataMember]
+        public IPAddress Ip_address { get; set; }
+        [DataMember]
+        public string Phone_Number { get; set; }
+        [DataMember]
+        public string Email { get; set; }
+        [DataMember]
+        public DateTime RegisterDate { get; set; }
+
+        [DataMember]
+        public int Region { get; set; }
+
+        public string Serialize()
+        {
+            var jsonSerializer = new DataContractJsonSerializer(typeof(RegistrationMessage));
+            using (var ms = new MemoryStream())
+            {
+                jsonSerializer.WriteObject(ms, this);
+                var result = Encoding.UTF8.GetString(ms.ToArray());
+                return result;
+            }
+        }
+
+        public static RegistrationMessage Deserialize(string json)
+        {
+            var jsonSerializer = new DataContractJsonSerializer(typeof(RegistrationMessage));
+
+            using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(json)))
+            {
+
+                var result = (RegistrationMessage)jsonSerializer.ReadObject(ms);
+                return result;
+            }
+        }
+    }
+}

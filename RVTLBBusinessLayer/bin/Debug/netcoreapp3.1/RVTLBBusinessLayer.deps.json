@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "RVTLBBusinessLayer/1.0.0": {
+        "dependencies": {
+          "RVTLibrary": "1.0.0"
+        },
+        "runtime": {
+          "RVTLBBusinessLayer.dll": {}
+        }
+      },
+      "RVTLibrary/1.0.0": {
+        "runtime": {
+          "RVTLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RVTLBBusinessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RVTLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

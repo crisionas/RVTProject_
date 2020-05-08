@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTLibrary", "RVTLibrary\RVTLibrary.csproj", "{08F0FA37-3409-40E9-AB24-7FFA6F1F83CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTConsole", "RVTConsole\RVTConsole.csproj", "{0A4107F3-A972-4337-AEB8-31E84CC2BEC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTLBBusinessLayer", "RVTLBBusinessLayer\RVTLBBusinessLayer.csproj", "{E104E74B-3A77-4EEB-AA73-7F053293E09E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVTLoadBalancer", "RVTLoadBalancer\RVTLoadBalancer.csproj", "{814321E1-1833-407E-92D7-CB4FD3417850}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08F0FA37-3409-40E9-AB24-7FFA6F1F83CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08F0FA37-3409-40E9-AB24-7FFA6F1F83CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08F0FA37-3409-40E9-AB24-7FFA6F1F83CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08F0FA37-3409-40E9-AB24-7FFA6F1F83CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4107F3-A972-4337-AEB8-31E84CC2BEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4107F3-A972-4337-AEB8-31E84CC2BEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4107F3-A972-4337-AEB8-31E84CC2BEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4107F3-A972-4337-AEB8-31E84CC2BEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E104E74B-3A77-4EEB-AA73-7F053293E09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E104E74B-3A77-4EEB-AA73-7F053293E09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E104E74B-3A77-4EEB-AA73-7F053293E09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E104E74B-3A77-4EEB-AA73-7F053293E09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814321E1-1833-407E-92D7-CB4FD3417850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814321E1-1833-407E-92D7-CB4FD3417850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814321E1-1833-407E-92D7-CB4FD3417850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814321E1-1833-407E-92D7-CB4FD3417850}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A89C245D-3B43-40ED-8A25-3F73A300B8CD}
+	EndGlobalSection
+EndGlobal
