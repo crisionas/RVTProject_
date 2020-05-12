@@ -26,7 +26,7 @@ namespace RVTLoadBalancer.Controllers
 
         // POST: api/Vote
         [HttpPost]
-        public async Task<ActionResult<VoteLbResponse>> Register([FromBody]ChooserLbMessage message)
+        public async Task<ActionResult<VoteLbResponse>> Vote([FromBody]ChooserLbMessage message)
         {
             var status = await _vote.Vote(message);
             return status;
