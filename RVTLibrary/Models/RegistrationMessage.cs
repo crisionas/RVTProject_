@@ -26,7 +26,7 @@ namespace RVTLibrary.Models
         [DataMember]
         public DateTime Birth_date { get; set; }
         [DataMember]
-        public IPAddress Ip_address { get; set; }
+        public string Ip_address { get; set; }
         [DataMember]
         public string Phone_Number { get; set; }
         [DataMember]
@@ -35,7 +35,7 @@ namespace RVTLibrary.Models
         public DateTime RegisterDate { get; set; }
 
         [DataMember]
-        public int Region { get; set; }
+        public string Region { get; set; }
 
         public string Serialize()
         {
@@ -58,6 +58,8 @@ namespace RVTLibrary.Models
                 var result = (RegistrationMessage)jsonSerializer.ReadObject(ms);
                 return result;
             }
+
+
         }
     }
 }

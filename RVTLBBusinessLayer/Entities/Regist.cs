@@ -12,9 +12,9 @@ namespace RVTLBBusinessLayer.Entities
 {
     public class Regist : UserImplementation, IAdministrator
     {
-        public new async Task<RegLbResponse> Registration(RegistrationMessage message)
+        public  Task<RegLbResponse> Registration(RegistrationMessage message)
         {
-            return await Registration(message);
+            return  RegistrationAction(message);
         }
 
     }

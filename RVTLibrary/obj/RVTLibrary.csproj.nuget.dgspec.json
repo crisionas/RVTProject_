@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\RVTProject_-master\\RVTLibrary\\RVTLibrary.csproj": {}
+    "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\RVTProject_-master\\RVTLibrary\\RVTLibrary.csproj": {
+    "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\RVTProject_-master\\RVTLibrary\\RVTLibrary.csproj",
+        "projectUniqueName": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj",
         "projectName": "RVTLibrary",
-        "projectPath": "C:\\Users\\User\\Desktop\\RVTProject_-master\\RVTLibrary\\RVTLibrary.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\RVTProject_-master\\RVTLibrary\\obj\\",
+        "projectPath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj",
+        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+        "outputPath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

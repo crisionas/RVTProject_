@@ -13,6 +13,8 @@ namespace RVTLoadBalancer
     {
         public static void Main(string[] args)
         {
+
+
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -22,5 +24,7 @@ namespace RVTLoadBalancer
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+
     }
 }

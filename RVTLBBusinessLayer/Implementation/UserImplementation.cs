@@ -18,7 +18,7 @@ namespace RVTLBBusinessLayer.Implementation
 {
     public class UserImplementation
     {
-        internal async Task<RegLbResponse> Registration(RegistrationMessage message)
+        internal async Task<RegLbResponse> RegistrationAction(RegistrationMessage message)
         {
             var task = new NodeRegMessage();
             task.Message = message;
@@ -39,14 +39,14 @@ namespace RVTLBBusinessLayer.Implementation
             task.NeighBours.Add(list[neighboors[1]]);
             task.NeighBours.Add(list[neighboors[2]]);
 
-            var content = new StringContent(task.Serialize(), Encoding.UTF8, "application.json");
+            var content = new StringContent(task.Serialize(), Encoding.UTF8, "application/json");
             var handler = new HttpClientHandler();
             //handler.ClientCertificates.Add(cert);
             handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
             handler.AllowAutoRedirect = true;
             var client = new HttpClient(handler);
 
-            client.BaseAddress = new Uri(list[point].IP.ToString());
+            client.BaseAddress = new Uri(list[point].Url);
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

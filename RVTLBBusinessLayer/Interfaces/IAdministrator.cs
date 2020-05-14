@@ -11,6 +11,6 @@ namespace RVTLBBusinessLayer.Interfaces
 {
     public interface IAdministrator
     {
-        public Task<RegLbResponse> Registration(RegistrationMessage message);
+        Task<RegLbResponse> Registration(RegistrationMessage message);
     }
 }

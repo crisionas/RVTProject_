@@ -8,7 +8,7 @@ namespace RVTLibrary.Objects
     public class Node
     {
 
-        public IPAddress IP { get; set; }
+        public string Url { get; set; }
         public  string NodeId { get; set; }
         public string SoftwareVersion { get; set; }
 
