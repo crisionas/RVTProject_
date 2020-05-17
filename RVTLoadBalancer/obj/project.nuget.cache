@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9c3wO/UXr+FukwGBYmuy79RLOnTUY7JUfGkkjGlkiiauHwXaT/insY2wN4fvH0Khw2In+n9hXX3RBoK3fNKYUw==",
+  "dgSpecHash": "OOfrO9RapX3AwH9FNYYtu4lqK/QyHHwrpUivmlLGVfHD6So3LjIaofC+Vb7Y+DjnrtRcCJg3OYX4Zzez6w2BBw==",
   "success": true,
   "projectFilePath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLoadBalancer\\RVTLoadBalancer.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,7 @@
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\3.1.2\\microsoft.visualstudio.web.codegenerators.mvc.3.1.2.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\Alex\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

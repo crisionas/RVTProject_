@@ -14,6 +14,7 @@ namespace RVTLoadBalancer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/json")]
     public class RegistController : ControllerBase
     {
         public IAdministrator _admin;

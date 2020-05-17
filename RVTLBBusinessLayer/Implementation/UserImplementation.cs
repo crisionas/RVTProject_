@@ -1,4 +1,5 @@
 ﻿
+using Newtonsoft.Json;
 using RVT_Block_lib.Models;
 using RVT_Block_lib.Responses;
 using RVTLBBusinessLayer.Entities;
@@ -12,6 +13,7 @@ using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace RVTLBBusinessLayer.Implementation
@@ -28,18 +30,22 @@ namespace RVTLBBusinessLayer.Implementation
             List<Node> list = nodelist.GetList();  // List of all nodes
 
             Random random = new Random();
-            var point = random.Next(list.Count); // Get Random Nod to do task
+            var point = 0;//random.Next(list.Count); // Get Random Nod to do task
+
+            IEnumerable<Node> threeRandom = list.OrderBy(x => random.Next()).Where(m => m.NodeId != list[point].NodeId).Take(3).Distinct();
 
 
-            IEnumerable<Node> threeRandom = list.OrderBy(x => random.Next()).Take(3).Distinct().Where(m => m.NodeId != list[point].NodeId);
+            List<Node> neighboors = new List<Node>();
 
-            List<int> neighboors = new List<int>();
 
-            task.NeighBours.Add(list[neighboors[0]]);
-            task.NeighBours.Add(list[neighboors[1]]);
-            task.NeighBours.Add(list[neighboors[2]]);
 
-            var content = new StringContent(task.Serialize(), Encoding.UTF8, "application/json");
+            foreach(var item in threeRandom)
+            {
+                neighboors.Add(item);
+            }
+            task.NeighBours = neighboors;
+            var msg = JsonConvert.SerializeObject(task);   //task.Serialize();
+            var content = new StringContent(msg, Encoding.UTF8, "application/json");
             var handler = new HttpClientHandler();
             //handler.ClientCertificates.Add(cert);
             handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
@@ -57,8 +63,8 @@ namespace RVTLBBusinessLayer.Implementation
             {
 
                 var data_resp = await response.Result.Content.ReadAsStringAsync();
-                responseFromNode = NodeRegResponse.Deserialize(data_resp);
-                var datatype = JsonDocument.Parse(data_resp);
+                responseFromNode = JsonConvert.DeserializeObject<NodeRegResponse>(data_resp);
+                //var datatype = JsonDocument.Parse(data_resp);
 
 
             }
