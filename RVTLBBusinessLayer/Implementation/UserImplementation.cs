@@ -30,7 +30,7 @@ namespace RVTLBBusinessLayer.Implementation
             List<Node> list = nodelist.GetList();  // List of all nodes
 
             Random random = new Random();
-            var point = 0;//random.Next(list.Count); // Get Random Nod to do task
+            var point = random.Next(list.Count); // Get Random Nod to do task
 
             IEnumerable<Node> threeRandom = list.OrderBy(x => random.Next()).Where(m => m.NodeId != list[point].NodeId).Take(3).Distinct();
 
