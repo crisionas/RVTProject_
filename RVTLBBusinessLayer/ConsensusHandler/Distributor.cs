@@ -39,10 +39,9 @@ namespace RVTLBBusinessLayer.ConsensusHandler
             return ChoosedNodes;
         }
 
-        public string Send(Node node, object package)
+        public void Send(Node node, object package)
         {
-            return _sender.Send(node, package);
-            
+            _sender.Send(node, package);
         }
 
     }
