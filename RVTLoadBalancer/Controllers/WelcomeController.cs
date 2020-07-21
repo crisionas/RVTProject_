@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RVTLBBusinessLayer;
 using RVTLBBusinessLayer.Entities;
 using RVTLBBusinessLayer.Interfaces;
-using RVTLibrary.Models;
 using RVTLibrary.Objects;
 
 namespace RVTLoadBalancer.Controllers
@@ -29,6 +23,7 @@ namespace RVTLoadBalancer.Controllers
         [HttpPost]
         public void Post([FromBody] Node node)
         {
+            node.Thumbprint = HttpContext.Connection.ClientCertificate.Thumbprint;
             NodeList.GetInstance();
             NodeList.Nodes.Add(node);
         }

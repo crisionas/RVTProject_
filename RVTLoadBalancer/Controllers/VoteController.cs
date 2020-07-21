@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RVT_Block_lib.Models;
 using RVT_Block_lib.Responses;
 using RVTLBBusinessLayer;
 using RVTLBBusinessLayer.Interfaces;
+using System.Threading.Tasks;
 
 namespace RVTLoadBalancer.Controllers
 {
@@ -26,7 +22,7 @@ namespace RVTLoadBalancer.Controllers
 
         // POST: api/Vote
         [HttpPost]
-        public async Task<ActionResult<VoteLbResponse>> Vote([FromBody]ChooserLbMessage message)
+        public async Task<ActionResult<VoteLbResponse>> Vote([FromBody] ChooserLbMessage message)
         {
             var status = await _vote.Vote(message);
             return status;

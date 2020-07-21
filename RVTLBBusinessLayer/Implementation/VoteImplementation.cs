@@ -9,7 +9,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace RVTLBBusinessLayer.Implementation
@@ -22,11 +21,11 @@ namespace RVTLBBusinessLayer.Implementation
             voteMessage.message = chooser;
             NodeList nodeList = NodeList.GetInstance();
             List<Node> list = nodeList.GetList();
-           // voteMessage.NeighBours = list;
+            // voteMessage.NeighBours = list;
 
 
             Random random = new Random();
-            var point = 0;//random.Next(list.Count);
+            var point = random.Next(list.Count);
             IEnumerable<Node> threeRandom = list.OrderBy(x => random.Next()).Where(m => m.NodeId != list[point].NodeId).Take(3).Distinct();
 
             List<Node> neighboors = new List<Node>();
@@ -59,11 +58,10 @@ namespace RVTLBBusinessLayer.Implementation
                     ProcessedTime = voteresponse.ProcessedTime
                 };
             }
-            catch(AggregateException ex)
+            catch (AggregateException ex)
             {
                 return new VoteLbResponse { Status = false, Message = "Eroare de conectare la server LB:" + ex.InnerException.ToString(), ProcessedTime = DateTime.Now };
             }
-
 
         }
     }

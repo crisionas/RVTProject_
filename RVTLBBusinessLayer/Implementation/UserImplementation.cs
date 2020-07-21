@@ -10,10 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace RVTLBBusinessLayer.Implementation
@@ -39,7 +36,7 @@ namespace RVTLBBusinessLayer.Implementation
 
 
 
-            foreach(var item in threeRandom)
+            foreach (var item in threeRandom)
             {
                 neighboors.Add(item);
             }
@@ -70,7 +67,7 @@ namespace RVTLBBusinessLayer.Implementation
             }
             catch (AggregateException e)
             {
-                return new RegLbResponse { Status = false, Message = "Eroare de connectare la server LB:" + e.InnerException.ToString() ,ProcessedTime=DateTime.Now};
+                return new RegLbResponse { Status = false, Message = "Eroare de connectare la server LB:" + e.InnerException.ToString(), ProcessedTime = DateTime.Now };
             }
 
             return new RegLbResponse
@@ -82,7 +79,7 @@ namespace RVTLBBusinessLayer.Implementation
                 ProcessedTime = DateTime.Now
             };
 
-           }
+        }
 
 
 

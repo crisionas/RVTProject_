@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTConsole", "RVTConsole\RV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTLBBusinessLayer", "RVTLBBusinessLayer\RVTLBBusinessLayer.csproj", "{E104E74B-3A77-4EEB-AA73-7F053293E09E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVTLoadBalancer", "RVTLoadBalancer\RVTLoadBalancer.csproj", "{814321E1-1833-407E-92D7-CB4FD3417850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTLoadBalancer", "RVTLoadBalancer\RVTLoadBalancer.csproj", "{814321E1-1833-407E-92D7-CB4FD3417850}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "RVTLoadBalancer/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Certificate": "3.1.5",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.2",
           "RVTLBBusinessLayer": "1.0.0",
@@ -315,6 +316,17 @@
         },
         "compile": {
           "RVTLoadBalancer.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/3.1.5": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "3.1.5.0",
+            "fileVersion": "3.100.520.27105"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3302,6 +3314,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/3.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WMRttwLF2iDqZinf9SsdYEzcn1EF23vT83OY8lQ6/PmdK8fh87N+GKrdX2VG/0/4zPghFK1hgH7Ko8Uz9MiRlQ==",
+      "path": "microsoft.aspnetcore.authentication.certificate/3.1.5",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.3.1.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",

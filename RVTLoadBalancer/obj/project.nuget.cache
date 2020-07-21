@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OOfrO9RapX3AwH9FNYYtu4lqK/QyHHwrpUivmlLGVfHD6So3LjIaofC+Vb7Y+DjnrtRcCJg3OYX4Zzez6w2BBw==",
+  "dgSpecHash": "8CWQtO+H1T0zA/iFOwXAX2kV9uaris06RUnBpnaXRE3+vMhR6zc9cCIX0FJXxvOYk06N9cDEcHoO+p5KC574qg==",
   "success": true,
   "projectFilePath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLoadBalancer\\RVTLoadBalancer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.authentication.certificate\\3.1.5\\microsoft.aspnetcore.authentication.certificate.3.1.5.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.4\\microsoft.aspnetcore.jsonpatch.3.1.4.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.4\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.4.nupkg.sha512",

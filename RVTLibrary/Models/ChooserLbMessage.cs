@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace RVT_Block_lib.Models
 {
     public class ChooserLbMessage
     {
-       
+
         [DataMember]
         public string IDNP { get; set; }
         [DataMember]

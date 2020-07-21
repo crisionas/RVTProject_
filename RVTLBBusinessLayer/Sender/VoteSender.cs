@@ -29,7 +29,6 @@ namespace RVTLBBusinessLayer.Sender
             var response = client.PostAsync("api/Vote", content);
 
             return response.Result.Content.ReadAsStringAsync().Result;
-
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using RVTLibrary.Algoritms;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Text;
@@ -14,7 +13,7 @@ namespace RVTLibrary
         public static string GetJson(this IHashable component)
         {
             var jsonFormatter = new DataContractJsonSerializer(component.GetType());
-            using(var ms=new MemoryStream())
+            using (var ms = new MemoryStream())
             {
                 jsonFormatter.WriteObject(ms, component);
                 var jsonString = Encoding.UTF8.GetString((ms.ToArray()));
@@ -24,7 +23,7 @@ namespace RVTLibrary
         public static IHashable Deserialize(Type type, string json)
         {
             var jsonFormatter = new DataContractJsonSerializer(type);
-            using (var ms =new MemoryStream(Encoding.UTF8.GetBytes(json)))
+            using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(json)))
             {
                 var deserialize = new DataContractJsonSerializer(type);
                 var result = (IHashable)deserialize.ReadObject(ms);

@@ -293,5 +293,6 @@ D:\C#_projects\RVT_LoadBalancer\RVTProject_\RVTLoadBalancer\obj\Debug\netcoreapp
 D:\C#_projects\RVT_LoadBalancer\RVTProject_\RVTLoadBalancer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\C#_projects\RVT_LoadBalancer\RVTProject_\RVTLoadBalancer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\C#_projects\RVT_LoadBalancer\RVTProject_\RVTLoadBalancer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\c#_projects\RVT_Loadbalancer\RVTproject_\RVTLoadbalancer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Certificate.dll
 D:\C#_projects\RVT_LoadBalancer\RVTProject_\RVTLoadBalancer\obj\Debug\netcoreapp3.1\RVTLoadBalancer.csproj.CoreCompileInputs.cache
 D:\C#_projects\RVT_LoadBalancer\RVTProject_\RVTLoadBalancer\obj\Debug\netcoreapp3.1\RVTLoadBalancer.MvcApplicationPartsAssemblyInfo.cache

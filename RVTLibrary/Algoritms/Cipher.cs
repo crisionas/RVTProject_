@@ -1,8 +1,6 @@
 ﻿using RVT_Block_lib.Models;
 using RVT_Block_lib.Responses;
-using RVTLibrary.Objects;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -21,8 +19,8 @@ namespace RVTLibrary.Algoritms
 
             keyBytes = SHA256.Create().ComputeHash(keyBytes);
 
-            var IDBDDecrypted = Cipher.Decrypt(idbdDecrypt,keyBytes);
-            string decrypted=Encoding.UTF8.GetString(IDBDDecrypted);
+            var IDBDDecrypted = Cipher.Decrypt(idbdDecrypt, keyBytes);
+            string decrypted = Encoding.UTF8.GetString(IDBDDecrypted);
             var result = decrypted.Split("_");
             for (int i = 0; i <= result.Length; i++)
                 node1.NeighBours[i].NodeId = result[i];
@@ -32,8 +30,8 @@ namespace RVTLibrary.Algoritms
         }
         public string Encrypt(NodeRegMessage node)
         {
-            string idbdtext="";
-            for (int i = 0; i<= node.NeighBours.Count; i++)
+            string idbdtext = "";
+            for (int i = 0; i <= node.NeighBours.Count; i++)
                 idbdtext = node.NeighBours[i].NodeId;
             var idbdEncrypt = Encoding.UTF8.GetBytes(idbdtext);
             var keyBytes = Encoding.UTF8.GetBytes(node.NeighBours.ToString());

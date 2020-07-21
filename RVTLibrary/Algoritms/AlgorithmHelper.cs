@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RVTLibrary.Algoritms
-{ 
+﻿namespace RVTLibrary.Algoritms
+{
     public static class AlgorithmHelper
     {
         public static string GetHash(this IHashable component, IAlgorithm algorithm = null)
         {
-            
+
             if (algorithm == null)
             {
                 algorithm = GetDefaultAlgorithm();
