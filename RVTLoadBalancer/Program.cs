@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using System.Net;
 
 namespace RVTLoadBalancer
 {
@@ -23,8 +19,21 @@ namespace RVTLoadBalancer
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                    webBuilder.ConfigureKestrel(o =>
+                        {
+                            o.ConfigureHttpsDefaults(o => o.ClientCertificateMode =
+                                ClientCertificateMode.RequireCertificate);
+                            o.Listen(IPAddress.Loopback, 5000);
+                            o.Listen(IPAddress.Loopback, 44322,
+                                listenOpt =>
+                                {
+                                listenOpt.UseHttps("D:\\C#_projects\\Node_certs\\LoadBalancer\\loadbalancer.pfx", "ar4iar4i", opt => opt.AllowAnyClientCertificate());
+                                });
+                        });
 
+                    
+                });
+        
 
     }
 }

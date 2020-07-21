@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Collections.Generic;
 
 namespace RVTConsole
 {
@@ -10,9 +9,9 @@ namespace RVTConsole
         {
             int nd = 00;
 
-            string int1 ="SAlut"+nd++;
+            string int1 = "SAlut" + nd++;
             Console.WriteLine(int1);
-  
+
         }
     }
 }
