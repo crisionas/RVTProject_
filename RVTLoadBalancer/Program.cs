@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Https;
 using Microsoft.Extensions.Hosting;
+using System.IO;
 using System.Net;
 
 namespace RVTLoadBalancer
@@ -27,7 +28,7 @@ namespace RVTLoadBalancer
                             o.Listen(IPAddress.Loopback, 44322,
                                 listenOpt =>
                                 {
-                                listenOpt.UseHttps("D:\\C#_projects\\Node_certs\\LoadBalancer\\loadbalancer.pfx", "ar4iar4i", opt => opt.AllowAnyClientCertificate());
+                                listenOpt.UseHttps(Path.Combine("../Certs/loadbalancer.pfx"), "ar4iar4i", opt => opt.AllowAnyClientCertificate());
                                 });
                         });
 
