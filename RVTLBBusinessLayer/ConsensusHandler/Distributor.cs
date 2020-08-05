@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace RVTLBBusinessLayer.ConsensusHandler
 {
@@ -29,17 +30,18 @@ namespace RVTLBBusinessLayer.ConsensusHandler
             return data;
         }
 
-        public IEnumerable<Node> FormateNodeList(int i)
+        public void FormateNodeList(int i)
         {
             var data = NodeList.GetInstance();
             var list = data.GetList();
             var random = new Random();
             var point = random.Next(list.Count());
+            Executor = list[point];
             ChoosedNodes = list.OrderBy(x => random.Next()).Where(m => m.NodeId != list[point].NodeId).Take(i).Distinct();
-            return ChoosedNodes;
+ 
         }
 
-        public string Send(Node node, object package)
+        public Task<string> Send(Node node, object package)
         {
            return  _sender.Send(node, package);
         }

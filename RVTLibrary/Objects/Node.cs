@@ -11,7 +11,6 @@ namespace RVTLibrary.Objects
         public string Url { get; set; }
         public string NodeId { get; set; }
         public string SoftwareVersion { get; set; }
-        public string Thumbprint { get; set; }
         public byte[] PublicKey { get; set; }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using RVTLibrary.Objects;
+using System.Threading.Tasks;
 
 namespace RVTLBBusinessLayer.Sender
 {
     public interface ISender
     {
-        string Send(Node node, object package);
+        Task<string> Send(Node node, object package);
     }
 }

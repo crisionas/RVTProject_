@@ -12,7 +12,7 @@ namespace RVTLBBusinessLayer.Sender
     public class VoteSender : ISender
     {
         public readonly HttpClient client;
-        public string Send(Node node, object package)
+        public async Task<string> Send(Node node, object package)
         {
             var data_req = JsonConvert.SerializeObject((NodeVoteMessage)package);
             var content = new StringContent(data_req, Encoding.UTF8, "application/json");
@@ -26,9 +26,9 @@ namespace RVTLBBusinessLayer.Sender
             client.BaseAddress = new Uri(node.Url);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var response = client.PostAsync("api/Vote", content);
+            var response = await client.PostAsync("api/Vote", content);
 
-            return response.Result.Content.ReadAsStringAsync().Result;
+            return response.Content.ReadAsStringAsync().Result;
         }
     }
 }

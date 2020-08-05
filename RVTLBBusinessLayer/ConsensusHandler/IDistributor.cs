@@ -8,7 +8,8 @@ namespace RVTLBBusinessLayer.ConsensusHandler
     public interface IDistributor
     {
         public Node Executor { get; set; }
-        public IEnumerable<Node> FormateNodeList(int i); // i = numbers of nodes for  choosing
+        public void FormateNodeList(int i); // i = numbers of nodes for  choosing
         NodeVoteMessage FormateMessage(ChooserLbMessage message);
     }
 }
+  
