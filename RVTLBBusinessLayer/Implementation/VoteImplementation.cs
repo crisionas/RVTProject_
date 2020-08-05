@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using RVT_Block_lib.Models;
 using RVT_Block_lib.Responses;
+using RVTLBBusinessLayer.ConsensusHandler;
 using RVTLBBusinessLayer.Entities;
+using RVTLBBusinessLayer.Sender;
 using RVTLibrary.Objects;
 using System;
 using System.Collections.Generic;
@@ -17,39 +19,17 @@ namespace RVTLBBusinessLayer.Implementation
     {
         internal async Task<VoteLbResponse> VoteAction(ChooserLbMessage chooser)
         {
-            var voteMessage = new NodeVoteMessage();
-            voteMessage.message = chooser;
-            NodeList nodeList = NodeList.GetInstance();
-            List<Node> list = nodeList.GetList();
-            // voteMessage.NeighBours = list;
 
+            var distribuitor = new Distributor(new VoteSender());
+            distribuitor.FormateNodeList(3);
+            var message = distribuitor.FormateMessage(chooser);
 
-            Random random = new Random();
-            var point = random.Next(list.Count);
-            IEnumerable<Node> threeRandom = list.OrderBy(x => random.Next()).Where(m => m.NodeId != list[point].NodeId).Take(3).Distinct();
-
-            List<Node> neighboors = new List<Node>();
-            foreach (var item in threeRandom)
-            {
-                neighboors.Add(item);
-            }
-
-            voteMessage.NeighBours = neighboors;
-            var data_req = JsonConvert.SerializeObject(voteMessage);
-            var content = new StringContent(data_req, Encoding.UTF8, "application/json");
-            var handler = new HttpClientHandler();
-            handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
-            handler.AllowAutoRedirect = true;
-            var client = new HttpClient(handler);
-            client.BaseAddress = new Uri(list[point].Url);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("aplication/json"));
-            var response = client.PostAsync("api/Vote", content);
-            var voteresponse = new NodeVoteResponse();
+            var response = await distribuitor.Send(distribuitor.Executor, message);
 
             try
             {
-                var resp = await response.Result.Content.ReadAsStringAsync();
-                voteresponse = JsonConvert.DeserializeObject<NodeVoteResponse>(resp);
+                
+                var voteresponse = JsonConvert.DeserializeObject<NodeVoteResponse>(response);
                 return new VoteLbResponse
                 {
                     Status = voteresponse.Status,

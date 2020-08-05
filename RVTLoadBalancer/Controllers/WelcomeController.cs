@@ -23,7 +23,8 @@ namespace RVTLoadBalancer.Controllers
         [HttpPost]
         public void Post([FromBody] Node node)
         {
-            node.Thumbprint = HttpContext.Connection.ClientCertificate.Thumbprint;
+           // node.Thumbprint = HttpContext.Connection.ClientCertificate.Thumbprint;
+            node.PublicKey = HttpContext.Connection.ClientCertificate.GetPublicKey();
             NodeList.GetInstance();
             NodeList.Nodes.Add(node);
         }
