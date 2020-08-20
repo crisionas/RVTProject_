@@ -68,19 +68,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {}
+    "C:\\Users\\Artyrik\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLBBusinessLayer\\RVTLBBusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Artyrik\\Desktop\\RVT\\RVTProject_\\RVTLBBusinessLayer\\RVTLBBusinessLayer.csproj",
       "projectName": "RVTLBBusinessLayer",
-      "projectPath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLBBusinessLayer\\RVTLBBusinessLayer.csproj",
-      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLBBusinessLayer\\obj\\",
+      "projectPath": "C:\\Users\\Artyrik\\Desktop\\RVT\\RVTProject_\\RVTLBBusinessLayer\\RVTLBBusinessLayer.csproj",
+      "packagesPath": "C:\\Users\\Artyrik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Artyrik\\Desktop\\RVT\\RVTProject_\\RVTLBBusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Artyrik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -93,8 +97,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj": {
-              "projectPath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj"
+            "C:\\Users\\Artyrik\\Desktop\\RVT\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj": {
+              "projectPath": "C:\\Users\\Artyrik\\Desktop\\RVT\\RVTProject_\\RVTLibrary\\RVTLibrary.csproj"
             }
           }
         }

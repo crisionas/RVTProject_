@@ -13,5 +13,9 @@ namespace RVTLBBusinessLayer
         {
             return new Vote();
         }
+        public IAdmin GetAdmin()
+        {
+            return new Admin();
+        }
     }
 }

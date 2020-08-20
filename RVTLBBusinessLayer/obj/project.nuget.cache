@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lXRi2NxyxdDF1ZofqsTHE2g7I/fp/68LlboIle6OHP0wRo/ITC/NyDmIteq8GBkH0YKmF7uMR2PTzJY0drF2SQ==",
+  "dgSpecHash": "hV152Zi3ygxKHfgfRbJwzgFQ1ZHNUxQCMAdjzv02flm4+sshUk9WmkWIkWpijChbNlHzBX0iw35T+7d6HdeAIA==",
   "success": true,
-  "projectFilePath": "D:\\C#_projects\\RVT_LoadBalancer\\RVTProject_\\RVTLBBusinessLayer\\RVTLBBusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Artyrik\\Desktop\\RVT\\RVTProject_\\RVTLBBusinessLayer\\RVTLBBusinessLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alex\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Artyrik\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
